@@ -13,7 +13,8 @@ RUN yum -y install xorg-x11-server-Xvfb xorg-x11-fonts-Type1 xorg-x11-fonts-misc
 RUN yum -y install xorg-x11-fonts-ISO8859-1-75dpi.noarch xorg-x11-fonts-ISO8859-1-100dpi.noarch
 RUN yum -y install xterm xorg-x11-utils
 RUN yum -y install gnome-panel gnome-terminal gnome-applets nautilus 
-RUN yum -y install firefox libreoffice thunderbird
+#RUN yum -y install firefox libreoffice thunderbird
+RUN yum -y install firefox
 RUN yum -y install xinetd xorg-x11-xdm
 RUN yum -y install vlgothic-fonts vlgothic-p-fonts ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts
 RUN yum -y install system-config-users
