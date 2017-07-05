@@ -5,7 +5,7 @@ FROM      darksolar/rhel6.6-gcc4.9
 
 RUN yum clean all && yum makecache && yum -y distribution-synchronization
 RUN yum update -y
-RUN yum install -y yum-plugin-ovl
+RUN ( yum install -y yum-plugin-ovl || yum install -y yum-plugin-ovl ) && yum clean all
 RUN yum -y install openssh openssh-server openssh-clients
 RUN service sshd start; service sshd stop
 RUN sed -i '/pam_loginuid\.so/s/required/optional/' /etc/pam.d/sshd
